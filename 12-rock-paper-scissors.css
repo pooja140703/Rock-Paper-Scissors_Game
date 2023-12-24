@@ -1,0 +1,45 @@
+body{
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.move-icon{
+  height: 50px;
+}
+
+.move-button{
+  /* background-color: rgb(25, 25, 25); */
+  background-color: transparent;
+  border: 3px solid; /*we can also use dotted or dashed*/
+  /* or we can use border-width: 3px; */
+  border-color: white;
+  border-radius: 70px;
+  padding: 30px;
+  /* margin-left: 10px; */
+  margin-right: 10px;
+}
+
+.result-css{
+   font-size: 25px;
+   font-weight: bold;
+   margin-top: 50px;
+}
+
+.score-css{
+  margin-top:60px;
+}
+
+.reset-score-button , .auto-play-button{
+  background-color: white;
+  border:none;
+  padding: 8px 15px;
+  font-size: 15px;
+  font-weight: 25px;
+  cursor:pointer;
+}
