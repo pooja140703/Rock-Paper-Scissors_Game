@@ -3,7 +3,7 @@
         let score = JSON.parse(localStorage.getItem('score'))|| {
             wins: 0,
             losses : 0,
-            tries:0
+            ties:0
           };
   
           // if(score == null)
@@ -27,9 +27,9 @@
            computerMove = 'rock';
           }else if((randomNumber >=1/3)&&(randomNumber <= 2/3))
           {
-            computerMove = 'Paper';
+            computerMove = 'paper';
           }else{
-            computerMove = 'Scissors';
+            computerMove = 'scissors';
           }
   
             return computerMove; 
@@ -44,24 +44,24 @@
               
             let result ='';
   
-          if(playerMove === 'Scissors')
+          if(playerMove === 'scissors')
           {
             if(computerMove === 'rock'){
               result ='You Lose';
-            }else if(computerMove === 'Paper'){
+            }else if(computerMove === 'paper'){
               result = 'You Win';
-            }else if(computerMove === 'Scissors')
+            }else if(computerMove === 'scissors')
             {
               result = 'Tie';
             }
   
-          }else if(playerMove === 'Paper')
+          }else if(playerMove === 'paper')
           {
             if(computerMove === 'rock'){
             result ='You Win';
-           }else if(computerMove === 'Paper'){
+           }else if(computerMove === 'paper'){
             result = 'Tie';
-           }else if(computerMove === 'Scissors')
+           }else if(computerMove === 'scissors')
            {
             result = 'You Lose';
            }
@@ -70,9 +70,9 @@
           {
             if(computerMove === 'rock'){
                 result ='Tie';
-              }else if(computerMove === 'Paper'){
+              }else if(computerMove === 'paper'){
                 result = 'You Lose';
-              }else if(computerMove === 'Scissors')
+              }else if(computerMove === 'scissors')
               {
                 result = 'You Win';
               }
@@ -98,7 +98,7 @@
         .innerHTML = result;
   
        document.querySelector('.js-moves')
-        .innerHTML = `You <img src="final_project/images/${playerMove}-emoji.png" class="move-icon">   <img src="final_project/images/${computerMove}-emoji.png" class="move-icon"> Computer`; 
+        .innerHTML = `You <img src="images/${playerMove}-emoji.png" class="move-icon">   <img src="images/${computerMove}-emoji.png" class="move-icon"> Computer`; 
        
   
   //  alert(`You Picked ${playerMove} . Computer picked ${computerMove}. ${result}
@@ -121,12 +121,12 @@
 
       document.querySelector('.js-paper-button')
           .addEventListener('click' ,() => {
-                playGame('Paper');
+                playGame('paper');
           });
 
       document.querySelector('.js-scissors-button')
           .addEventListener('click' ,() => {
-                playGame('Scissors');
+                playGame('scissors');
           });
 
       document.querySelector('.js-autoplay-button')
@@ -149,7 +149,7 @@
           {
             playGame('rock');
           }else if(event.key === 'p'){
-            playGame('papers');
+            playGame('paper');
           }else if(event.k){}
       })
 
